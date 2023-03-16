@@ -1,4 +1,6 @@
 import React from 'react';
+import DrawRectangle from "../tools/Rectangel.js";
+
 
 export default class ToolBar extends React.Component {
   render(){

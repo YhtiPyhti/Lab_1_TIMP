@@ -53,13 +53,11 @@ button, input{
 }
 
 .MyCanvas{
-	resize: both;
-	border: solid;
-	height: 540px;
-	margin-top: 20px;
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-
 canvas{
-	width: auto;
-	height: auto;
+	border: 1px solid;
 }
