@@ -1,0 +1,9 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+select {
+  position: absolute;
+  top: 55px;
+  left: 55px;
+}
