@@ -5,6 +5,7 @@ import toolState from '../store/ToolState';
 import canvasState from '../store/CanvaseState';
 import Pen from "../tools/Pen.js";
 
+//поля для рисования
 const MyCanvas = observer( () => {
   const canvasRef = useRef();
 
