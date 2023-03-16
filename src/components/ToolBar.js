@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from 'react';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+export default class ToolBar extends React.Component {
+  render(){
+    return (
+      <div className="ToolBar">
+        <button className="ButtonPen"/>
+        <button className="ButtonRect"/>
+        <button className="ButtonInputTxt"/>
+        <input className="ButtonColor" type="color"/>
+      </div>
+    )
+  };
+}

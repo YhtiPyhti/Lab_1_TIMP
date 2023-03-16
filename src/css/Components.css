@@ -1,0 +1,65 @@
+.SettingBar{
+	top: 0;
+	display: block;
+	height: 40px;
+	width: 100;
+	background-color: red;
+}
+
+button, input{
+	width: 40px;
+	height: 40px;
+	margin-left: 20px;
+}
+
+.ButtonNext{
+	background-image: url("../images/button-right.png");
+}
+
+.ButtonBack{
+	background-image: url("../images/button-left.png");
+}
+
+.ButtonExit{
+	background-image: url("../images/button-exit.png");
+	right: 0;
+}
+
+.ButtonSave{
+	background-image: url("../images/button-save.png");
+}
+
+
+.ToolBar{
+	top: 40;
+	height: 40px;
+	width: 100;
+	background-color: black;
+}
+
+.ButtonPen{
+	background-image: url("../images/pen.png");
+	background-repeat: no-repeat;
+}
+
+.ButtonRect{
+	background-image: url("../images/rectangle.png");
+	background-repeat: no-repeat;
+}
+
+.ButtonInputTxt{
+	background-image: url("../images/textInput.png");
+	width: 150px;
+}
+
+.MyCanvas{
+	resize: both;
+	border: solid;
+	height: 540px;
+	margin-top: 20px;
+}
+
+canvas{
+	width: auto;
+	height: auto;
+}
