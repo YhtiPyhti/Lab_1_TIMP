@@ -1,9 +1,9 @@
-import Tools from './Tools.js';
+import Tools from './Tools';
 
 export default class Pen extends Tools {
   constructor(canvas){
     super(canvas);
-    this.listen()
+    this.listen();
   }
 
   listen(){

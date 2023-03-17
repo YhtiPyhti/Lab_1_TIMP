@@ -3,15 +3,15 @@ import {useEffect} from 'react';
 import {observer} from 'mobx-react-lite';
 import toolState from '../store/ToolState';
 import canvasState from '../store/CanvaseState';
-import Pen from "../tools/Pen.js";
+import Pen from "../tools/Pen";
 
 //поля для рисования
 const MyCanvas = observer( () => {
   const canvasRef = useRef();
 
   useEffect( () => {
-    canvasState.setCanvas(canvasRef.current)
-    toolState.setTool(new Pen(canvasRef.current))
+    canvasState.setCanvas(canvasRef.current);
+    toolState.setTool(null);
   }, [])
 
 

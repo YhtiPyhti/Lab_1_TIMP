@@ -10,14 +10,8 @@ button, input{
 	width: 40px;
 	height: 40px;
 	margin-left: 20px;
-}
-
-.ButtonNext{
-	background-image: url("../images/button-right.png");
-}
-
-.ButtonBack{
-	background-image: url("../images/button-left.png");
+	background-position: center center;
+	background-repeat: no-repeat;
 }
 
 .ButtonExit{
@@ -34,22 +28,28 @@ button, input{
 	top: 40;
 	height: 40px;
 	width: 100;
-	background-color: black;
+	background-color: grey;
 }
 
 .ButtonPen{
 	background-image: url("../images/pen.png");
-	background-repeat: no-repeat;
 }
 
 .ButtonRect{
 	background-image: url("../images/rectangle.png");
-	background-repeat: no-repeat;
 }
 
 .ButtonInputTxt{
 	background-image: url("../images/textInput.png");
 	width: 150px;
+}
+
+.ButtonEraser{
+	background-image: url("../images/eraser.png");
+}
+
+.ButtonClear{
+	background-image: url("../images/clear.png");
 }
 
 .MyCanvas{
