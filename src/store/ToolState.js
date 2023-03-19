@@ -12,6 +12,10 @@ class ToolState {
     setFillColor(color) {
         this.tool.fillColor = color
     }
+    setWidth(width){
+        this.tool.lineWidth = width;
+    }
+
 }
 
 export default new ToolState()

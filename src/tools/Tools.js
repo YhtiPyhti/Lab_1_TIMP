@@ -2,7 +2,7 @@ export default class Tools {
   constructor(canvas){
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d');
-    this.destroyEvent()
+    this.destroyEvent();
   }
 
   set fillColor(color){
@@ -10,6 +10,9 @@ export default class Tools {
     this.ctx.strokeStyle = color;
   }
 
+  set lineWidth(width) {
+    this.ctx.lineWidth = width;
+  }
 
   destroyEvent(){
     this.canvas.onmousemove = null;

@@ -3,7 +3,7 @@ import Tools from './Tools';
 export default class Rectangel extends Tools {
   constructor(canvas){
     super(canvas);
-    this.listen()
+    this.listen();
   }
 
   listen(){
