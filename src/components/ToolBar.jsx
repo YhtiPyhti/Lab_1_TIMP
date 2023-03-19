@@ -28,10 +28,9 @@ const ToolBar = () =>{
       <button className="ButtonRect" onClick = {() => toolState.setTool(new Rectangel(canvasState.canvas))}/>
       <button className="ButtonCircle"onClick = {() => toolState.setTool(new Circle(canvasState.canvas))}/>
       <button className="ButtonStick"onClick = {() => toolState.setTool(new Stick(canvasState.canvas))}/>
-      <button className="ButtonInputTxt"/>
+      <button className="ButtonInputTxt" onClick = {(e) => toolState.setTool(new InputTXT(canvasState.canvas))}/>
       <button className="ButtonClear" onClick = {() => toolState.setTool(new Trash(canvasState.canvas))}/>
       <button className="ButtonEraser" onClick = {() => toolState.setTool(new Eraser(canvasState.canvas))}/>
-
       <input 
         className="ButtonColor" 
         id="fill-color" 
@@ -40,8 +39,7 @@ const ToolBar = () =>{
       />
       <label style={{margin:'10px'}}>Цвет</label>
 
-      <input
-
+      <input 
         className="ButtonStoke" 
         id="stroke"
         type="number" 
@@ -50,14 +48,10 @@ const ToolBar = () =>{
         max={18}
         onChange = {e => changeWidth(e)}
       />
-
       <label style={{margin:'10px'}}>Толщина линии</label>
-
-
-
-
     </div>
   );
 };
 
 export default ToolBar;
+
