@@ -31,15 +31,17 @@ const ToolBar = () =>{
       <button className="ButtonInputTxt"/>
       <button className="ButtonClear" onClick = {() => toolState.setTool(new Trash(canvasState.canvas))}/>
       <button className="ButtonEraser" onClick = {() => toolState.setTool(new Eraser(canvasState.canvas))}/>
+
       <input 
         className="ButtonColor" 
         id="fill-color" 
         type="color" 
         onChange = {e => changeColor(e)}
       />
-      <label style={{margin:'10px'}}>Цвет заливки</label>
+      <label style={{margin:'10px'}}>Цвет</label>
 
-      <input 
+      <input
+
         className="ButtonStoke" 
         id="stroke"
         type="number" 
@@ -48,7 +50,12 @@ const ToolBar = () =>{
         max={18}
         onChange = {e => changeWidth(e)}
       />
+
       <label style={{margin:'10px'}}>Толщина линии</label>
+
+
+
+
     </div>
   );
 };
