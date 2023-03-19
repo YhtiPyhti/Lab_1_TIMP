@@ -1,18 +1,15 @@
 html{
-  font: 14px "Century Gothic", Futura, sans-serif;
+  font: 25px "Century Gothic", Futura, sans-serif;
 }
 
 body{
 	background: url("../images/фон02.jpg");
-}
-body {
+
     width: 100%;
     min-width: 1024px;
     height: 100%;
     min-height: 720px;
 }
-
-
 
 .ToolBar{
 	top: 40px;
@@ -22,7 +19,7 @@ body {
 
 }
 
-button, input{
+button,input{
 	background-size: contain;
 	background-color: #530FAD;
 	vertical-align: bottom;
@@ -30,15 +27,13 @@ button, input{
 	height: 38px;
 	margin-left: 20px;
 	background-position: center center;
-  	background-repeat: no-repeat;
+  background-repeat: no-repeat;
 	border: none;
-
-
 }
-
-
-
-
+.textInput{
+	background-color: white;
+	border: 1px solid;
+}
 
 
 .ButtonStick{

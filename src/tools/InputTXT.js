@@ -1,6 +1,6 @@
 import Tools from './Tools';
 
-export default class Circle extends Tools {
+export default class InputTXT extends Tools {
   constructor(canvas){
     super(canvas);
     this.listen();
@@ -17,13 +17,14 @@ export default class Circle extends Tools {
 
   mouseDownHandler(e){
     this.mouseDown = true;
-    var input = document.createElement('input');
+    let input = document.createElement('input');
 
     this.X_begin = e.pageX - e.target.offsetLeft;
     this.Y_begin = e.pageY - e.target.offsetTop;
 
     input.type = 'text';
     input.style.position = 'fixed';
+    input.setAttribute('class', 'textInput');
     input.style.left = (this.X_begin) + 'px';
     input.style.top = (this.Y_begin) + 'px';
 
@@ -35,7 +36,7 @@ export default class Circle extends Tools {
 
   //Key handler for input box:
   handleEnter(e) {
-    var keyCode = e.keyCode;
+    let keyCode = e.keyCode;
     if (keyCode === 13) {
       draw(this.value, parseInt(this.style.left, 10), parseInt(this.style.top, 10));
       document.body.removeChild(this);
@@ -49,5 +50,6 @@ function draw(txt, x, y) {
   let canvas = document.getElementById('myCanvas'), ctx = canvas.getContext('2d');
   ctx.textBaseline = 'top';
   ctx.textAlign = 'left';
+  ctx.font = '17px sans-serif';
   ctx.fillText(txt, x - 4, y);
 }
