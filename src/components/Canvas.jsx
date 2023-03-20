@@ -5,11 +5,18 @@ import toolState from '../store/ToolState';
 import canvasState from '../store/CanvaseState';
 import Pen from "../tools/Pen";
 
-
-//поля для рисования
+/**
+*@description
+* функциональный компонет для создания canvas.
+* 
+*@param нет.
+*@returns код HTML.
+*
+*/
 const MyCanvas = observer( () => {
   const canvasRef = useRef();
 
+  //хук для определения нового инструмента.
   useEffect( () => {
     canvasState.setCanvas(canvasRef.current);
     toolState.setTool(new toolState.setTool(new Pen(canvasState.canvas)));
@@ -23,4 +30,5 @@ const MyCanvas = observer( () => {
   );
 });
 
+//для дальнейшего использования экспортируем.
 export default MyCanvas;

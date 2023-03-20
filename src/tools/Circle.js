@@ -1,5 +1,11 @@
 import Tools from './Tools';
 
+/**
+ *
+ * @description
+ * класс для создания круга.
+ * 
+ */
 export default class Circle extends Tools {
   constructor(canvas){
     super(canvas);
@@ -30,6 +36,7 @@ export default class Circle extends Tools {
       let Y_end = e.pageY - e.target.offsetTop;
       let width = X_end - this.X_begin;
       let height = Y_end - this.Y_begin;
+      //вычисляем радиус круга.
       let radius = Math.sqrt(width**2 + height**2);
       this.draw(this.X_begin,this.Y_begin, radius);
     }

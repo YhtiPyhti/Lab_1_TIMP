@@ -1,5 +1,12 @@
 import Tools from './Tools';
 
+/**
+ *
+ * @description
+ * класс для создания поля
+ * для ввода текста на холсте.
+ * 
+ */
 export default class InputTXT extends Tools {
   constructor(canvas){
     super(canvas);
@@ -17,11 +24,13 @@ export default class InputTXT extends Tools {
 
   mouseDownHandler(e){
     this.mouseDown = true;
+    //при нажатии создаем элемент с тегом input.
     let input = document.createElement('input');
 
     this.X_begin = e.pageX - e.target.offsetLeft;
     this.Y_begin = e.pageY - e.target.offsetTop;
 
+    //задаем стандартные свойста тегу.
     input.type = 'text';
     input.style.position = 'fixed';
     input.setAttribute('class', 'textInput');
@@ -30,11 +39,12 @@ export default class InputTXT extends Tools {
 
     input.onkeydown = this.handleEnter;
 
+    //добавляем к 
     document.body.appendChild(input);
     input.focus();
   }
 
-  //Key handler for input box:
+  //обработчик ввода и нажатия клавиши Enter.
   handleEnter(e) {
     let keyCode = e.keyCode;
     if (keyCode === 13) {
@@ -45,7 +55,22 @@ export default class InputTXT extends Tools {
 }
 
 
-  //Draw the text onto canvas:
+/**
+ * 
+ * @description
+ * функция для вставки текста,
+ * как изображения на cnavas.
+ * 
+ * @remark
+ * вынесли за класс, т.к.
+ * иначе не работало).
+ * 
+ * @param txt - введеный текст
+ * @param x, y - координаты для встаки текста.
+ * 
+ * @returns нету.
+ * 
+ */
 function draw(txt, x, y) {
   let canvas = document.getElementById('myCanvas'), ctx = canvas.getContext('2d');
   ctx.textBaseline = 'top';
